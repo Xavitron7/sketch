@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body {
+    font-style: arial, sans-serif;
+}
+
 /*Styling the outside container*/
 #container {
     border: 5px solid black;
@@ -11,15 +15,44 @@
     width: 600px;
     margin: auto;  
     display: grid; 
-    grid-template: repeat(16, 1fr) / repeat(16, 1fr)
-}
+    grid-template: repeat(16, 1fr) / repeat(16, 1fr);
+    margin-bottom: 1rem; 
 
+}
+/*Creating the grid squares. No sizes. Sizes will be determined by the Javascript and Grid*/ 
 .grid-square {
 border: 1px #000 solid;
 cursor: pointer;
 }
 
+/* Class used when user hovers over square*/
 .hovered {
     background-color: black;
 
+}
+/* Container for the number input and buttons */
+#dimensions {
+    min-height: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+}
+/* Not used. Was previously there to hide dimensions box. Keeping in case JS changes */
+.hide {
+    display: none;
+    
+} 
+/* Button and input styles */
+button {
+    border: 0;
+    padding: 1rem;
+    background-color: #444;
+    color: #fff;
+    border-radius: 20%;
+}
+
+#numberInput {
+    padding: 1rem;
+    width: 70vw;
+    margin: 0.5rem;
 }
